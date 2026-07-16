@@ -27,6 +27,7 @@ already expects (point that tool's `url` at your deployed URL instead of
 """
 import json
 import os
+import numpy as np
 import pandas as pd
 from fastapi import FastAPI, HTTPException
 from agent_config.pipeline import forecasting
@@ -41,13 +42,18 @@ OUTPUTS_DIR = "outputs"
 
 
 def _read_csv_records(filename: str):
+    """Reads a precomputed pipeline output CSV, replacing NaN (e.g. an
+    unmeasurable growth % for a sparse-coverage item/category) with None
+    so the response is valid JSON."""
     path = os.path.join(OUTPUTS_DIR, filename)
     if not os.path.exists(path) or os.path.getsize(path) == 0:
         raise HTTPException(
             status_code=503,
             detail=f"{path} not found. Run the pipeline locally and commit/redeploy this file.",
         )
-    return pd.read_csv(path).to_dict(orient="records")
+    df = pd.read_csv(path)
+    df = df.replace({np.nan: None})
+    return df.to_dict(orient="records")
 
 
 def _read_json(filename: str):
@@ -109,9 +115,11 @@ def get_item_forecast():
 def get_risk():
     """Disruption risk score by region, served from the precomputed
     outputs/disruption_risk_by_region.csv snapshot."""
+    weights_file = _read_json("disruption_risk_weights.json")
     return {
         "results_path": "outputs/disruption_risk_by_region.csv",
-        "weights_used": _read_json("disruption_risk_weights.json"),
+        "weights_used": weights_file.get("weights_used", weights_file),
+        "cancellation_signal_available": weights_file.get("cancellation_signal_available"),
         "ranked": _read_csv_records("disruption_risk_by_region.csv"),
     }
 

@@ -21,7 +21,10 @@ def get_sarimax_forecast(steps: int = 7) -> dict:
     Args:
         steps: Number of future intervals (days/weeks) to predict. Default is 7.
     """
-    url = "http://127.0.0.1:8000/forecast"
+    # Defaults to the local FastAPI server; set FORECAST_API_URL in .env to
+    # point this at a deployed instance instead (e.g. your Railway URL +
+    # "/forecast"), so this tool isn't dependent on 127.0.0.1 staying up.
+    url = os.environ.get("FORECAST_API_URL", "http://127.0.0.1:8000/forecast")
     try:
         response = requests.get(url, params={"steps": steps}, timeout=10)
         if response.status_code == 200:
