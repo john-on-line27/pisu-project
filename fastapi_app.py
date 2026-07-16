@@ -73,11 +73,21 @@ def health():
 
 
 @app.get("/forecast")
-def get_forecast(steps: int = 14, test_size: int = 28):
+def get_forecast(steps: int = 14, test_size: int = 28, jitter: bool = True, jitter_pct: float = 0.20):
     """Aggregate demand forecast -- the endpoint the README's n8n workflow
     calls on a schedule. Returns the forecast series plus a single
     `max_forecast_value` field, which is what the n8n IF node should
     compare against its alert threshold.
+
+    `jitter` (default True) applies random +/-jitter_pct noise to each
+    forecast value before returning. The real SARIMAX model is
+    deterministic given the same input data, so without this every call
+    would return an identical result -- fine for a real deployment, but
+    it means an n8n workflow calling this on a schedule would never see
+    its IF-node threshold trip during testing/demo runs. This is a
+    presentation-layer randomization for exercising both branches of the
+    workflow, NOT a change to the underlying forecasting methodology --
+    set jitter=false to get the model's real, unperturbed output.
     """
     try:
         result = forecasting.train_backtest_forecast(steps=steps, test_size=test_size)
@@ -85,11 +95,19 @@ def get_forecast(steps: int = 14, test_size: int = 28):
         raise HTTPException(status_code=503, detail="outputs/demand_timeseries.csv not found -- run the cleaning agent (run_pipeline.py) first.")
 
     fc_df = pd.read_csv(result["forecast_path"])
+
+    if jitter:
+        noise = np.random.uniform(1 - jitter_pct, 1 + jitter_pct, size=len(fc_df))
+        fc_df["forecast"] = (fc_df["forecast"] * noise).round(1)
+        fc_df["upper_80"] = (fc_df["upper_80"] * noise).round(1)
+        fc_df["lower_80"] = (fc_df["lower_80"] * noise).clip(lower=0).round(1)
+
     peak = fc_df.loc[fc_df["forecast"].idxmax()]
 
     return {
         "steps": steps,
         "backtest_mape_pct": result["backtest_metrics"]["mape_pct"],
+        "jitter_applied": jitter,
         "forecast": fc_df.to_dict(orient="records"),
         "max_forecast_value": float(peak["forecast"]),
         "max_forecast_date": str(peak["date"]),
