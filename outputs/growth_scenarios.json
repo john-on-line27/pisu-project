@@ -1,0 +1,24 @@
+{
+  "downside": {
+    "label": "Downside -- data gap reflects a real contraction",
+    "annual_revenue": 5307582.0,
+    "annual_profit": 573711.0,
+    "vs_base_pct": -53.5,
+    "assumption": "Only currently-active regions (Oceania, Southeast Asia, South Asia, Eastern Asia) continue ordering; all others remain at zero."
+  },
+  "base": {
+    "label": "Base -- historical steady state continues",
+    "annual_revenue": 11412662.0,
+    "annual_profit": 1233625.0,
+    "vs_base_pct": 0.0,
+    "assumption": "The 3-year historical daily average continues unchanged; the coverage gap is a data artifact, not a real change in ordering behavior."
+  },
+  "upside": {
+    "label": "Upside -- execute investment agent recommendations",
+    "annual_revenue": 12216614.0,
+    "annual_profit": 1320526.0,
+    "vs_base_pct": 7.0,
+    "assumption": "Base, plus the measured growth rate in active regions (10.7% avg) weighted by their 19.1% revenue share, plus a 5% management-execution uplift from redirecting investment toward top-ranked regions/categories (a stated planning assumption, not a statistical forecast)."
+  },
+  "margin_used": 0.1081
+}

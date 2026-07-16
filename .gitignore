@@ -1,1 +1,19 @@
 .env
+
+/__pycache__
+/.venv
+/agent_config/__pycache__
+/agent_config/pipeline/__pycache__
+
+# Old superseded report drafts (keep the latest of each only)
+PISU_Pipeline_Report.docx
+PISU_Pipeline_Report_v2.docx
+PISU_Pipeline_Report_v3.docx
+
+# Raw/intermediate data -- large and either regenerable or not ours to redistribute
+data/*.csv
+data/*.csv.bak
+outputs/cleaned_orders.csv
+
+# Kaggle download cache, if ever created locally
+kagglehub/

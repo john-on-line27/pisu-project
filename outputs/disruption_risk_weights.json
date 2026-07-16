@@ -1,0 +1,9 @@
+{
+  "weights_used": {
+    "late_delivery_rate": 0.2941176470588235,
+    "shipping_delay_severity": 0.23529411764705882,
+    "demand_volatility": 0.23529411764705882,
+    "data_coverage_gap": 0.23529411764705882
+  },
+  "cancellation_signal_available": false
+}

@@ -1,0 +1,11 @@
+google-adk
+google-genai
+python-dotenv
+requests
+pandas
+numpy
+statsmodels
+matplotlib
+kagglehub
+fastapi
+uvicorn

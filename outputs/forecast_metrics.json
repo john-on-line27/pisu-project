@@ -1,0 +1,21 @@
+{
+  "backtest": {
+    "test_size_days": 28,
+    "mae": 5.03,
+    "rmse": 6.0,
+    "mape_pct": 7.61,
+    "order": [
+      1,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      1,
+      1,
+      7
+    ]
+  },
+  "model_aic": 11393.8,
+  "steps_forecasted": 5
+}

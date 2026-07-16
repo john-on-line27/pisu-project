@@ -1,0 +1,393 @@
+{
+  "Central America": {
+    "region_total_units": 59540,
+    "top_items": [
+      {
+        "item": "Perfect Fitness Perfect Rip Deck",
+        "units": 11724
+      },
+      {
+        "item": "Nike Men's Dri-FIT Victory Golf Polo",
+        "units": 9911
+      },
+      {
+        "item": "O'Brien Men's Neoprene Life Vest",
+        "units": 9287
+      }
+    ]
+  },
+  "Western Europe": {
+    "region_total_units": 53943,
+    "top_items": [
+      {
+        "item": "Perfect Fitness Perfect Rip Deck",
+        "units": 10458
+      },
+      {
+        "item": "Nike Men's Dri-FIT Victory Golf Polo",
+        "units": 9054
+      },
+      {
+        "item": "O'Brien Men's Neoprene Life Vest",
+        "units": 7805
+      }
+    ]
+  },
+  "South America": {
+    "region_total_units": 30978,
+    "top_items": [
+      {
+        "item": "Perfect Fitness Perfect Rip Deck",
+        "units": 5781
+      },
+      {
+        "item": "Nike Men's Dri-FIT Victory Golf Polo",
+        "units": 5327
+      },
+      {
+        "item": "O'Brien Men's Neoprene Life Vest",
+        "units": 4772
+      }
+    ]
+  },
+  "Oceania": {
+    "region_total_units": 19592,
+    "top_items": [
+      {
+        "item": "Perfect Fitness Perfect Rip Deck",
+        "units": 3566
+      },
+      {
+        "item": "Nike Men's Dri-FIT Victory Golf Polo",
+        "units": 2926
+      },
+      {
+        "item": "O'Brien Men's Neoprene Life Vest",
+        "units": 2828
+      }
+    ]
+  },
+  "Northern Europe": {
+    "region_total_units": 19561,
+    "top_items": [
+      {
+        "item": "Perfect Fitness Perfect Rip Deck",
+        "units": 3789
+      },
+      {
+        "item": "Nike Men's Dri-FIT Victory Golf Polo",
+        "units": 3337
+      },
+      {
+        "item": "O'Brien Men's Neoprene Life Vest",
+        "units": 2959
+      }
+    ]
+  },
+  "Southern Europe": {
+    "region_total_units": 18676,
+    "top_items": [
+      {
+        "item": "Perfect Fitness Perfect Rip Deck",
+        "units": 3492
+      },
+      {
+        "item": "Nike Men's Dri-FIT Victory Golf Polo",
+        "units": 3105
+      },
+      {
+        "item": "O'Brien Men's Neoprene Life Vest",
+        "units": 2848
+      }
+    ]
+  },
+  "Southeast Asia": {
+    "region_total_units": 18062,
+    "top_items": [
+      {
+        "item": "Perfect Fitness Perfect Rip Deck",
+        "units": 3236
+      },
+      {
+        "item": "Nike Men's Dri-FIT Victory Golf Polo",
+        "units": 2737
+      },
+      {
+        "item": "O'Brien Men's Neoprene Life Vest",
+        "units": 2634
+      }
+    ]
+  },
+  "Caribbean": {
+    "region_total_units": 17400,
+    "top_items": [
+      {
+        "item": "Perfect Fitness Perfect Rip Deck",
+        "units": 3457
+      },
+      {
+        "item": "Nike Men's Dri-FIT Victory Golf Polo",
+        "units": 2775
+      },
+      {
+        "item": "O'Brien Men's Neoprene Life Vest",
+        "units": 2695
+      }
+    ]
+  },
+  "West of USA ": {
+    "region_total_units": 16635,
+    "top_items": [
+      {
+        "item": "Perfect Fitness Perfect Rip Deck",
+        "units": 3442
+      },
+      {
+        "item": "Nike Men's Dri-FIT Victory Golf Polo",
+        "units": 2704
+      },
+      {
+        "item": "O'Brien Men's Neoprene Life Vest",
+        "units": 2426
+      }
+    ]
+  },
+  "South Asia": {
+    "region_total_units": 15043,
+    "top_items": [
+      {
+        "item": "Perfect Fitness Perfect Rip Deck",
+        "units": 2733
+      },
+      {
+        "item": "Nike Men's Dri-FIT Victory Golf Polo",
+        "units": 2210
+      },
+      {
+        "item": "O'Brien Men's Neoprene Life Vest",
+        "units": 2018
+      }
+    ]
+  },
+  "East of USA": {
+    "region_total_units": 14508,
+    "top_items": [
+      {
+        "item": "Perfect Fitness Perfect Rip Deck",
+        "units": 2722
+      },
+      {
+        "item": "Nike Men's Dri-FIT Victory Golf Polo",
+        "units": 2446
+      },
+      {
+        "item": "O'Brien Men's Neoprene Life Vest",
+        "units": 2144
+      }
+    ]
+  },
+  "Eastern Asia": {
+    "region_total_units": 13781,
+    "top_items": [
+      {
+        "item": "Perfect Fitness Perfect Rip Deck",
+        "units": 2336
+      },
+      {
+        "item": "O'Brien Men's Neoprene Life Vest",
+        "units": 2031
+      },
+      {
+        "item": "Nike Men's Dri-FIT Victory Golf Polo",
+        "units": 1971
+      }
+    ]
+  },
+  "West Asia": {
+    "region_total_units": 12655,
+    "top_items": [
+      {
+        "item": "Perfect Fitness Perfect Rip Deck",
+        "units": 2564
+      },
+      {
+        "item": "Nike Men's Dri-FIT Victory Golf Polo",
+        "units": 2140
+      },
+      {
+        "item": "O'Brien Men's Neoprene Life Vest",
+        "units": 1916
+      }
+    ]
+  },
+  "US Center ": {
+    "region_total_units": 12471,
+    "top_items": [
+      {
+        "item": "Perfect Fitness Perfect Rip Deck",
+        "units": 2520
+      },
+      {
+        "item": "Nike Men's Dri-FIT Victory Golf Polo",
+        "units": 2178
+      },
+      {
+        "item": "O'Brien Men's Neoprene Life Vest",
+        "units": 1935
+      }
+    ]
+  },
+  "Eastern Europe": {
+    "region_total_units": 8470,
+    "top_items": [
+      {
+        "item": "Perfect Fitness Perfect Rip Deck",
+        "units": 1653
+      },
+      {
+        "item": "O'Brien Men's Neoprene Life Vest",
+        "units": 1423
+      },
+      {
+        "item": "Nike Men's Dri-FIT Victory Golf Polo",
+        "units": 1397
+      }
+    ]
+  },
+  "South of  USA ": {
+    "region_total_units": 8418,
+    "top_items": [
+      {
+        "item": "Perfect Fitness Perfect Rip Deck",
+        "units": 1669
+      },
+      {
+        "item": "Nike Men's Dri-FIT Victory Golf Polo",
+        "units": 1479
+      },
+      {
+        "item": "O'Brien Men's Neoprene Life Vest",
+        "units": 1251
+      }
+    ]
+  },
+  "West Africa": {
+    "region_total_units": 7925,
+    "top_items": [
+      {
+        "item": "Perfect Fitness Perfect Rip Deck",
+        "units": 1496
+      },
+      {
+        "item": "Nike Men's Dri-FIT Victory Golf Polo",
+        "units": 1386
+      },
+      {
+        "item": "O'Brien Men's Neoprene Life Vest",
+        "units": 1238
+      }
+    ]
+  },
+  "North Africa": {
+    "region_total_units": 6834,
+    "top_items": [
+      {
+        "item": "Perfect Fitness Perfect Rip Deck",
+        "units": 1411
+      },
+      {
+        "item": "O'Brien Men's Neoprene Life Vest",
+        "units": 1093
+      },
+      {
+        "item": "Nike Men's Dri-FIT Victory Golf Polo",
+        "units": 1044
+      }
+    ]
+  },
+  "East Africa": {
+    "region_total_units": 3886,
+    "top_items": [
+      {
+        "item": "Perfect Fitness Perfect Rip Deck",
+        "units": 800
+      },
+      {
+        "item": "O'Brien Men's Neoprene Life Vest",
+        "units": 627
+      },
+      {
+        "item": "Nike Men's Dri-FIT Victory Golf Polo",
+        "units": 560
+      }
+    ]
+  },
+  "Central Africa": {
+    "region_total_units": 3573,
+    "top_items": [
+      {
+        "item": "Perfect Fitness Perfect Rip Deck",
+        "units": 659
+      },
+      {
+        "item": "Nike Men's Dri-FIT Victory Golf Polo",
+        "units": 635
+      },
+      {
+        "item": "O'Brien Men's Neoprene Life Vest",
+        "units": 539
+      }
+    ]
+  },
+  "Southern Africa": {
+    "region_total_units": 2387,
+    "top_items": [
+      {
+        "item": "Perfect Fitness Perfect Rip Deck",
+        "units": 409
+      },
+      {
+        "item": "Nike Men's Dri-FIT Victory Golf Polo",
+        "units": 386
+      },
+      {
+        "item": "O'Brien Men's Neoprene Life Vest",
+        "units": 358
+      }
+    ]
+  },
+  "Canada": {
+    "region_total_units": 2063,
+    "top_items": [
+      {
+        "item": "Perfect Fitness Perfect Rip Deck",
+        "units": 406
+      },
+      {
+        "item": "Nike Men's Dri-FIT Victory Golf Polo",
+        "units": 327
+      },
+      {
+        "item": "O'Brien Men's Neoprene Life Vest",
+        "units": 315
+      }
+    ]
+  },
+  "Central Asia": {
+    "region_total_units": 1190,
+    "top_items": [
+      {
+        "item": "Perfect Fitness Perfect Rip Deck",
+        "units": 252
+      },
+      {
+        "item": "Nike Men's Dri-FIT Victory Golf Polo",
+        "units": 197
+      },
+      {
+        "item": "O'Brien Men's Neoprene Life Vest",
+        "units": 191
+      }
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "summary": {
+    "n_periods": 1127,
+    "mean": 326.17,
+    "std": 97.94,
+    "min": 60.0,
+    "max": 488.0,
+    "total": 367591.0,
+    "coefficient_of_variation": 0.3
+  },
+  "trend_seasonality": {
+    "trend_slope_per_day": -0.164,
+    "trend_direction": "flat",
+    "weekly_seasonality_strength_0to1": 0.004,
+    "period_used_days": 7
+  },
+  "breakdowns": {
+    "top_categories_by_units": {
+      "Cleats": 70611,
+      "Women'S Apparel": 60232,
+      "Indoor/Outdoor Games": 55333,
+      "Cardio Equipment": 35937,
+      "Shop By Sport": 31329
+    },
+    "top_categories_by_revenue": {
+      "Fishing": 6637668.28,
+      "Cleats": 4244594.01,
+      "Camping & Hiking": 3946837.0,
+      "Cardio Equipment": 3533289.21,
+      "Women'S Apparel": 3011600.0
+    },
+    "top_regions_by_units": {
+      "Central America": 59540,
+      "Western Europe": 53943,
+      "South America": 30978,
+      "Oceania": 19592,
+      "Northern Europe": 19561
+    }
+  }
+}

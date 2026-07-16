@@ -1,0 +1,24 @@
+region,historical_total_units,recent_window_avg_daily,data_coverage,forecast_total_units,forecast_avg_daily,growth_vs_recent_pct,status
+Central America,59540,0.0,sparse,9.3,0.67,,ok
+Western Europe,53943,3.13,sparse,9.6,0.69,-78.1,ok
+South America,30978,0.0,sparse,1.9,0.13,,ok
+Oceania,19592,15.19,active,220.7,15.77,3.8,ok
+Northern Europe,19561,1.43,sparse,14.0,1.0,-30.4,ok
+Southern Europe,18676,1.17,sparse,8.7,0.62,-46.5,ok
+Southeast Asia,18062,18.59,active,318.3,22.73,22.3,ok
+Caribbean,17400,0.0,sparse,1.2,0.09,,ok
+West of USA ,16635,0.0,sparse,3.6,0.26,,ok
+South Asia,15043,12.09,active,227.2,16.23,34.2,ok
+East of USA,14508,0.0,sparse,2.3,0.16,,ok
+Eastern Asia,13781,13.91,active,160.8,11.48,-17.4,ok
+West Asia,12655,0.0,sparse,3.1,0.22,,ok
+US Center ,12471,0.0,sparse,5.8,0.41,,ok
+Eastern Europe,8470,0.0,sparse,5.6,0.4,,ok
+South of  USA ,8418,0.0,sparse,4.3,0.31,,ok
+West Africa,7925,0.0,sparse,5.0,0.36,,ok
+North Africa,6834,0.0,sparse,2.3,0.17,,ok
+East Africa,3886,0.0,sparse,0.0,0.0,,ok
+Central Africa,3573,0.0,sparse,2.4,0.17,,ok
+Southern Africa,2387,0.0,sparse,2.3,0.17,,ok
+Canada,2063,0.0,sparse,2.2,0.16,,ok
+Central Asia,1190,0.0,sparse,1.4,0.1,,ok

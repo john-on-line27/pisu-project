@@ -1,0 +1,167 @@
+{
+  "name": "PISU Supply Chain - Demand Forecast Alert",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "days",
+              "daysInterval": 1,
+              "triggerAtHour": 6
+            }
+          ]
+        }
+      },
+      "id": "1a1b1c1d-0001-4a4a-9a9a-000000000001",
+      "name": "Schedule Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [-200, 0]
+    },
+    {
+      "parameters": {
+        "url": "http://127.0.0.1:8000/forecast",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "steps",
+              "value": "14"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "1a1b1c1d-0002-4a4a-9a9a-000000000002",
+      "name": "Call Forecast API",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [20, 0]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose"
+          },
+          "conditions": [
+            {
+              "id": "cond-1",
+              "leftValue": "={{ $json.max_forecast_value }}",
+              "rightValue": 75,
+              "operator": {
+                "type": "number",
+                "operation": "gt"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "1a1b1c1d-0003-4a4a-9a9a-000000000003",
+      "name": "Forecast Above Threshold?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [240, 0]
+    },
+    {
+      "parameters": {
+        "select": "channel",
+        "channelId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "supply-chain-alerts"
+        },
+        "text": "=Supply chain demand alert: forecast peaks at {{ $json.max_forecast_value }} units on {{ $json.max_forecast_date }} (14-day forecast, backtest MAPE {{ $json.backtest_mape_pct }}%). Threshold: 75 units.",
+        "otherOptions": {}
+      },
+      "id": "1a1b1c1d-0004-4a4a-9a9a-000000000004",
+      "name": "Slack Alert",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.2,
+      "position": [460, -120]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "REPLACE_WITH_YOUR_GOOGLE_SHEET_ID"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "list",
+          "value": "forecast_history"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "date_logged": "={{ $now.toISODate() }}",
+            "max_forecast_value": "={{ $json.max_forecast_value }}",
+            "max_forecast_date": "={{ $json.max_forecast_date }}",
+            "backtest_mape_pct": "={{ $json.backtest_mape_pct }}",
+            "alert_triggered": "false"
+          }
+        },
+        "options": {}
+      },
+      "id": "1a1b1c1d-0005-4a4a-9a9a-000000000005",
+      "name": "Log to Google Sheet",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [460, 120]
+    }
+  ],
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Call Forecast API",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Call Forecast API": {
+      "main": [
+        [
+          {
+            "node": "Forecast Above Threshold?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Forecast Above Threshold?": {
+      "main": [
+        [
+          {
+            "node": "Slack Alert",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Log to Google Sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "pinData": {}
+}

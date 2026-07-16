@@ -1,0 +1,17 @@
+{
+  "Downside": {
+    "revenue": 5307582,
+    "profit": 573711,
+    "pct": -53.5
+  },
+  "Base": {
+    "revenue": 11412662,
+    "profit": 1233625,
+    "pct": 0.0
+  },
+  "Upside": {
+    "revenue": 12216614,
+    "profit": 1320526,
+    "pct": 7.0
+  }
+}
