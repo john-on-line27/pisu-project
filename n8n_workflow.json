@@ -21,7 +21,7 @@
     },
     {
       "parameters": {
-        "url": "http://127.0.0.1:8000/forecast",
+        "url": "https://web-production-0fe3f.up.railway.app/forecast",
         "sendQuery": true,
         "queryParameters": {
           "parameters": [
